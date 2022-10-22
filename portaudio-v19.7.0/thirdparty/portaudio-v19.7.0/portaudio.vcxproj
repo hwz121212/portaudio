@@ -58,20 +58,10 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_DIRECTSOUNDFULLDUPLEXCREATE;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR="Debug";portaudio_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_DIRECTSOUNDFULLDUPLEXCREATE;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR="Debug";portaudio_EXPORTS</PreprocessorDefinitions>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_DIRECTSOUNDFULLDUPLEXCREATE;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR=\"Debug\";portaudio_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src\common;D:\hanwenzhi_code\PortAudio\backup\portaudio-v19.7.0;src\os\win;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>src\common;D:\hanwenzhi_code\PortAudio\backup\portaudio-v19.7.0;src\os\win;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
+    
+    
     <Link>
       <AdditionalDependencies>winmm.lib;dsound.lib;ole32.lib;uuid.lib;ole32.lib;uuid.lib;setupapi.lib;ole32.lib;uuid.lib;setupapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)</AdditionalLibraryDirectories>
@@ -96,21 +86,11 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_DIRECTSOUNDFULLDUPLEXCREATE;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR="Release";portaudio_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_DIRECTSOUNDFULLDUPLEXCREATE;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR="Release";portaudio_EXPORTS</PreprocessorDefinitions>
       <DebugInformationFormat />
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_DIRECTSOUNDFULLDUPLEXCREATE;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR=\"Release\";portaudio_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src\common;D:\hanwenzhi_code\PortAudio\backup\portaudio-v19.7.0;src\os\win;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>src\common;D:\hanwenzhi_code\PortAudio\backup\portaudio-v19.7.0;src\os\win;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
+    
+    
     <Link>
       <AdditionalDependencies>winmm.lib;dsound.lib;ole32.lib;uuid.lib;ole32.lib;uuid.lib;setupapi.lib;ole32.lib;uuid.lib;setupapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)</AdditionalLibraryDirectories>
@@ -154,92 +134,92 @@
     <ClInclude Include="src\common\pa_types.h" />
     <ClInclude Include="src\common\pa_util.h" />
     <ClCompile Include="src\common\pa_allocation.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\common\pa_converters.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\common\pa_cpuload.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\common\pa_debugprint.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\common\pa_dither.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\common\pa_front.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\common\pa_process.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\common\pa_ringbuffer.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\common\pa_stream.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\common\pa_trace.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\hostapi\skeleton\pa_hostapi_skeleton.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\os\win\pa_win_hostapis.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\os\win\pa_win_util.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\os\win\pa_win_waveformat.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\os\win\pa_win_wdmks_utils.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\os\win\pa_win_coinitialize.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\os\win\pa_x86_plain_converters.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\hostapi\dsound\pa_win_ds.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\hostapi\dsound\pa_win_ds_dynlink.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\hostapi\wmme\pa_win_wmme.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\hostapi\wasapi\pa_win_wasapi.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="src\hostapi\wdmks\pa_win_wdmks.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE</PreprocessorDefinitions>
     </ClCompile>
     <None Include="portaudio_cmake.def" />
   </ItemGroup>
