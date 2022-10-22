@@ -95,9 +95,13 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "devs_example", "test\bindings\cpp\example\devs_example.vcxproj", "{1B9A038D-80A3-4DBD-9F0D-AF10B49B863A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A78DCBC4-077B-4884-A7F4-D9AF70EDB538} = {A78DCBC4-077B-4884-A7F4-D9AF70EDB538}
+		{D18EA0C9-8C65-441D-884C-55EB43A84F2A} = {D18EA0C9-8C65-441D-884C-55EB43A84F2A}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sine_example", "test\bindings\cpp\example\sine_example.vcxproj", "{2A1C84B4-D32E-41D3-BDE4-AF42A0436566}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D18EA0C9-8C65-441D-884C-55EB43A84F2A} = {D18EA0C9-8C65-441D-884C-55EB43A84F2A}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0_lib", "0_lib", "{4E64F37F-2C44-4C6A-8436-5C7CFBC74547}"
 EndProject

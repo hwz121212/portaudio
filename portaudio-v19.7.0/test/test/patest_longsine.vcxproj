@@ -104,7 +104,7 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\hanwenzhi_code\PortAudio\backup\portaudio-v19.7.0\test\patest_longsine.c" />
+    <ClCompile Include="patest_longsine.c" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
