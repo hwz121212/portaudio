@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0FAFF1B6-CBB1-35CE-B08C-F5AF167C2E26}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>portaudio</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;src\common;src\os\win;include</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling />
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_DIRECTSOUNDFULLDUPLEXCREATE;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR="Debug";portaudio_EXPORTS</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_DIRECTSOUNDFULLDUPLEXCREATE;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR=\"Debug\";portaudio_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src\common;D:\hanwenzhi_code\PortAudio\backup\portaudio-v19.7.0;src\os\win;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>src\common;D:\hanwenzhi_code\PortAudio\backup\portaudio-v19.7.0;src\os\win;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>winmm.lib;dsound.lib;ole32.lib;uuid.lib;ole32.lib;uuid.lib;setupapi.lib;ole32.lib;uuid.lib;setupapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(SolutionDir)lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>portaudio.def</ModuleDefinitionFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;src\common;src\os\win;include</AdditionalIncludeDirectories>
+      <ExceptionHandling />
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_DIRECTSOUNDFULLDUPLEXCREATE;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR="Release";portaudio_EXPORTS</PreprocessorDefinitions>
+      <DebugInformationFormat />
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;PAWIN_USE_DIRECTSOUNDFULLDUPLEXCREATE;PAWIN_USE_WDMKS_DEVICE_INFO;PORTAUDIO_CMAKE_GENERATED;PA_LITTLE_ENDIAN;CMAKE_INTDIR=\"Release\";portaudio_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src\common;D:\hanwenzhi_code\PortAudio\backup\portaudio-v19.7.0;src\os\win;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>src\common;D:\hanwenzhi_code\PortAudio\backup\portaudio-v19.7.0;src\os\win;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>winmm.lib;dsound.lib;ole32.lib;uuid.lib;ole32.lib;uuid.lib;setupapi.lib;ole32.lib;uuid.lib;setupapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(SolutionDir)lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>portaudio.def</ModuleDefinitionFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\os\win\pa_win_coinitialize.h" />
+    <ClInclude Include="src\os\win\pa_win_wdmks_utils.h" />
+    <ClInclude Include="src\os\win\pa_x86_plain_converters.h" />
+    <ClInclude Include="src\hostapi\dsound\pa_win_ds_dynlink.h" />
+    <ClInclude Include="options_cmake.h" />
+    <ClInclude Include="include\portaudio.h" />
+    <ClInclude Include="include\pa_win_ds.h" />
+    <ClInclude Include="include\pa_win_waveformat.h" />
+    <ClInclude Include="include\pa_win_wmme.h" />
+    <ClInclude Include="include\pa_win_wasapi.h" />
+    <ClInclude Include="include\pa_win_wdmks.h" />
+    <ClInclude Include="src\common\pa_allocation.h" />
+    <ClInclude Include="src\common\pa_converters.h" />
+    <ClInclude Include="src\common\pa_cpuload.h" />
+    <ClInclude Include="src\common\pa_debugprint.h" />
+    <ClInclude Include="src\common\pa_dither.h" />
+    <ClInclude Include="src\common\pa_endianness.h" />
+    <ClInclude Include="src\common\pa_hostapi.h" />
+    <ClInclude Include="src\common\pa_memorybarrier.h" />
+    <ClInclude Include="src\common\pa_process.h" />
+    <ClInclude Include="src\common\pa_ringbuffer.h" />
+    <ClInclude Include="src\common\pa_stream.h" />
+    <ClInclude Include="src\common\pa_trace.h" />
+    <ClInclude Include="src\common\pa_types.h" />
+    <ClInclude Include="src\common\pa_util.h" />
+    <ClCompile Include="src\common\pa_allocation.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\common\pa_converters.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\common\pa_cpuload.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\common\pa_debugprint.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\common\pa_dither.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\common\pa_front.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\common\pa_process.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\common\pa_ringbuffer.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\common\pa_stream.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\common\pa_trace.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\hostapi\skeleton\pa_hostapi_skeleton.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\os\win\pa_win_hostapis.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\os\win\pa_win_util.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\os\win\pa_win_waveformat.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\os\win\pa_win_wdmks_utils.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\os\win\pa_win_coinitialize.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\os\win\pa_x86_plain_converters.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\hostapi\dsound\pa_win_ds.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\hostapi\dsound\pa_win_ds_dynlink.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\hostapi\wmme\pa_win_wmme.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\hostapi\wasapi\pa_win_wasapi.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\hostapi\wdmks\pa_win_wdmks.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <None Include="portaudio_cmake.def" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

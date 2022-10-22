@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{76c0d7dc-4967-42c7-82a5-c8b5c3dbca32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="host">
+      <UniqueIdentifier>{f54504ea-1132-4751-a066-ad1818da0639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="host\pc">
+      <UniqueIdentifier>{587a0a0f-1bec-48a7-8e96-8fac29c42508}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\asio.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\combase.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\debugmessage.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="host\ASIOConvertSamples.cpp">
+      <Filter>host</Filter>
+    </ClCompile>
+    <ClCompile Include="host\asiodrivers.cpp">
+      <Filter>host</Filter>
+    </ClCompile>
+    <ClCompile Include="host\pc\asiolist.cpp">
+      <Filter>host\pc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\asio.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\asiodrvr.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\asiosys.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\combase.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\iasiodrv.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\wxdebug.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="host\ASIOConvertSamples.h">
+      <Filter>host</Filter>
+    </ClInclude>
+    <ClInclude Include="host\asiodrivers.h">
+      <Filter>host</Filter>
+    </ClInclude>
+    <ClInclude Include="host\ginclude.h">
+      <Filter>host</Filter>
+    </ClInclude>
+    <ClInclude Include="host\pc\asiolist.h">
+      <Filter>host\pc</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
